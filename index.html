@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Managment System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/product-management.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <nav>
+        <a href="./">Home</a>
+        <a href="./add.html">Add Product</a>
+        <input type="text" placeholder="search product" id="search" style="width: auto;">
+    </nav>
+
+    <div id="content">
+        <h1>All Products</h1>
+        <div id="filter">
+            <form id="filterform">
+                <label>category</label>
+                <select id="Category">
+                    <option value="All">All</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Fashion">Fashion</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Grocery">Grocery</option>
+                    <option value="Decor">Decor</option>
+                    <option value="Home & Kitchen">Home & Kitchen</option>
+                    <option value="Toys & Games">Toys & Games</option>
+                </select>
+                <label class="price">price</label>
+                <select id="Price">
+                    <option value="All">All</option>
+                    <option value="0-500">0-500</option>
+                    <option value="500-1000">500-1000</option>
+                    <option value="1000-5000">1000-5000</option>
+                    <option value="5000 & above">5000 & above</option>
+                </select>
+                <label>
+                    <input type="checkbox" value="exclude out of stock" id="outofStock"> exclude out of stock
+                </label>
+                <button id="btn">Filter</button>
+                <button id="btn" class="reset">reset</button>
+            </form>
+        </div>
+        <div id="main"></div>
+        <div id="results"></div>
+        <div id="pagination">
+            <button id="pagebutton"><i class="fa-solid fa-angle-left"></i></button>
+            <div id="pages"></div>
+            <button id="pagebutton"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+
+    <script type="module" src="script/app.js"></script>
+</body>
+</html>

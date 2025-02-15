@@ -1,0 +1,279 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #575757;
+}
+
+#content {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"], input[type="number"], textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+input[type="date"], input[type="file"], select{
+    margin-left: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="checkbox"] {
+    margin-left: 10px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#main,#results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin: 10px;
+    text-align: left;
+    overflow: hidden;
+    max-height: 28px;
+}
+.product-details{
+    max-width: 50%;
+    max-height: 65vh;
+    overflow: auto;
+}
+.card p {
+    margin: 0 10px 8px;
+    color: #555;
+    text-align: left;
+    display: block;
+    max-height: 18px;
+}
+
+.desc{
+    overflow: hidden;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 15px;
+    margin-top: 0;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.product{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.product img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product h3{
+    font-size: 1.5em;
+    margin: 10px;
+    text-align: left;
+}
+.product-data{
+    cursor: pointer;
+}
+#filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px;
+}
+
+#filter select{
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#filter #btn{
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: #776e6e;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 1%;
+}
+
+#filter #btn:hover{
+    background-color: #575757;
+}
+
+.price{
+    padding-left: 1%;
+}
+.search{
+    padding-left: 1%;
+}
+
+#filterform{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#pagination{
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    margin: 20px;
+}
+
+#pagination #pagebutton {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#pagination #pagebutton:hover {
+    background-color: #0056b3;
+}
+
+#pagination #pagebutton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#pagination .active {
+    background-color: #0056b3 !important; 
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    #content {
+        padding: 15px;
+    }
+
+    #main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 250px;
+    }
+    #filter #btn{
+        margin-left: 0;
+    }
+}

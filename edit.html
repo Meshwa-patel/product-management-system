@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/product-management.png" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <a href="./">Home</a>
+        <a href="./add.html">Add Product</a>
+    </nav>
+    <div id="content">
+        <h1>Edit Product</h1>
+        <form id="productForm" >
+            <label>Product Name: <input type="text" id="productName" required></label><br>
+            <label>Price: <input type="number" id="price" min="1" required></label><br>
+            <label>Description: <textarea name="" id="description" required></textarea></label><br>
+            <label>Category: 
+                <select name="" id="category">
+                    <option value="Electronics">Electronics</option>
+                    <option value="Fashion">Fashion</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Grocery">Grocery</option>
+                    <option value="Decor">Decor</option>
+                    <option value="Home & Kitchen">Home & Kitchen</option>
+                    <option value="Toys & Games">Toys & Games</option>
+                </select>
+            </label><br>
+            <label>Manufacturing Date: <input type="date" id="mfdate" max=""></label><br>
+            <label>selling Type:</label>
+            <label>
+                <input type="radio" class="pricing" value="retail" id="retail" name="priceType" required> Retail
+            </label>
+            <label>
+                <input type="radio" class="pricing" value="wholesale" id="wholesale" name="priceType" required> Wholesale
+            </label><br>
+            <label>Is Out of Stock: <input type="checkbox" id="outofStock"></label><br>
+            <label>Product Image: <input type="file" class="form-control" id="productImage" accept="image/png, image/jpeg, image/jpg"></label><br>
+            <button type="submit" >update Product</button>
+        </form>
+    </div>
+    <script type="module">
+        // Set max date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('mfdate').max = today;
+        import { productdetails } from './script/update.js';
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+            if (productId) {
+                productdetails(productId);
+            }
+            
+        });
+        
+    </script>
+</body>
+</html>
