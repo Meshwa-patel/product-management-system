@@ -1,4 +1,4 @@
-export function pagination(){
+export function pagination(){ 
     const cardsperpage = 6;
     let cards = document.querySelectorAll('.card');
     let paginationdiv = document.getElementById('pages');

@@ -1,4 +1,4 @@
-function productdisplay(productId) {
+function productdisplay(productId) { 
     const data = JSON.parse(localStorage.getItem(productId));
     if (data) {
         const mainDiv = document.getElementById('product');

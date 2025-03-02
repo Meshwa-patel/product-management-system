@@ -1,4 +1,3 @@
-
 // Update product details in localStorage
 function productdetails(productId) {
     const productForm = document.getElementById("productForm");

@@ -1,5 +1,5 @@
 // Store data in localStorage
-function createProduct(){
+function createProduct(){ 
     const productForm = document.getElementById("productForm");
     if (productForm) {
         productForm.addEventListener("submit", function(event) {

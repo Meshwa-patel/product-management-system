@@ -1,5 +1,5 @@
 // Get all products from localStorage
-function readProducts() {
+function readProducts() { 
     const mainDiv = document.getElementById('main');
     if(mainDiv){
         mainDiv.innerHTML = ''; // Clear previous content

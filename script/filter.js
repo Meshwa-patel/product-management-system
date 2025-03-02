@@ -1,4 +1,4 @@
-import { pagination } from "./pagination.js";
+import { pagination } from "./pagination.js"; 
 
 export function filter() {
     let filterform = document.getElementById('filterform');
